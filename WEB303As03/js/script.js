@@ -15,7 +15,7 @@ function Data()
             $('#team').empty();
 
            
-            $.each(data.members, function(index, staff) 
+            $.each(data.members, function(_index, staff) 
             {
                 var informationOfMember = '<h2>' + staff.name + '</h2>' +
                                  '<h5>' + staff.position + '</h5>' +
