@@ -1,4 +1,5 @@
 let $table = $('<table/>');
+
 $('body').append($table);
 
 $table.append('<thead/>');
@@ -40,7 +41,8 @@ $.ajax(
 
     success: function (response) {
 
-        $.each(response, function (index, value) {
+        $.each(response, function (index, value) 
+        {
 
             let $row = $('<tr/>').addClass('row');
             $row.append($('<td id="fname"></td>').text(value.FirstName));
@@ -52,6 +54,7 @@ $.ajax(
             $row.append($('<td></td>').text(value.Role));
 
             $('tbody').append($row);
+
         });
 
         let $names = $('tbody #fname');
@@ -72,25 +75,28 @@ $.ajax(
 
         });
 
-        function searchFirstName() {
+        function searchFirstName() 
+        {
 
             let Querys = this.value.trim().toLowerCase();
-            $catch.forEach(function (firstName) {
+            $catch.forEach(function (FirstName) {
 
                 let index = 0;
-                if (Querys) {
+                if (Querys) 
+                {
 
-                    index = firstName.text.indexOf(Querys);
+                    index = FirstName.text.indexOf(Querys);
 
                 }
 
-                firstName.element.style.background = index === -1 ? 'grey' : 'LightBlue';
-                firstName.element.style.color = index === -1 ? 'black' : 'white';
+                FirstName.element.style.background = index === -1 ? 'grey' : 'LightBlue';
+                FirstName.element.style.color = index === -1 ? 'black' : 'white';
 
-                if ($search.val() == " ") {
+                if ($search.val() == " ") 
+                {
 
-                    firstName.element.style.color = 'black';
-                    firstName.element.style.background = 'rgb(221, 230, 173)';
+                    FirstName.element.style.color = 'black';
+                    FirstName.element.style.background = 'rgb(221, 230, 173)';
 
                 }
 
@@ -98,11 +104,12 @@ $.ajax(
 
         }
 
-        if ('oninput' in $search[0]) {
-
+        if ('oninput' in $search[0]) 
+        {
             $search.on('input', searchFirstName);
 
-        } else {
+        } else 
+        {
 
             $search.on('input', searchFirstName);
 
@@ -110,40 +117,48 @@ $.ajax(
     },
 });
 
-$('#filterAM').on('click', function () {
+$('#filterAM').on('click', function () 
+{
 
     filterTable('A', 'M');
 });
 
-$('#filterNZ').on('click', function () {
+$('#filterNZ').on('click', function () 
+{
 
     filterTable('N', 'Z');
 });
 
-function filterTable(First, endChar) {
+function filterTable(First, LastChar) 
+{
 
     let Count = 0;
 
-    $('tbody .row').each(function () {
+    $('tbody .row').each(function () 
+    {
 
         let LastName = $(this).find('td:nth-child(2)').text();
         let FirstRoleLetter = LastName.trim().charAt(0).toUpperCase();
 
-        if (FirstRoleLetter >= First && FirstRoleLetter <= endChar) {
+        if (FirstRoleLetter >= First && FirstRoleLetter <= LastChar) 
+        {
 
             $(this).show();
             Count++;
 
-        } else {
+        } else 
+        {
 
             $(this).hide();
             
         }
     });
 
-    if (First === 'A') {
+    if (First === 'A') 
+    {
 
         $('#filterAM').text(`A - M (${Count})`);
+
     } else {
 
         $('#filterNZ').text(`N - Z (${Count})`);
