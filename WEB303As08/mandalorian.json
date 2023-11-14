@@ -1,0 +1,47 @@
+[
+    {
+        "FirstName": "Din",
+        "LastName": "Djarin",
+        "Age": "40",
+        "Occupation": "Bounty Hunter",
+        "Place": "Navarro",
+        "RoleName": "The Mandalorian",
+        "Role": "Protector"
+    },
+    {
+        "FirstName": "Grogu",
+        "LastName": "",
+        "Age": "50",
+        "Occupation": "Force-sensitive Child",
+        "Place": "Unknown",
+        "RoleName": "The Child",
+        "Role": "Ward"
+    },
+    {
+        "FirstName": "Cara",
+        "LastName": "Dune",
+        "Age": "38",
+        "Occupation": "Mercenary",
+        "Place": "Alderaan",
+        "RoleName": "Cara Dune",
+        "Role": "Enforcer"
+    },
+    {
+        "FirstName": "Greef",
+        "LastName": "Karga",
+        "Age": "50",
+        "Occupation": "Guild Leader",
+        "Place": "Navarro",
+        "RoleName": "Greef Karga",
+        "Role": "Coordinator"
+    },
+    {
+        "FirstName": "IG",
+        "LastName": "11",
+        "Age": "Unknown",
+        "Occupation": "Assassin Droid",
+        "Place": "Unknown",
+        "RoleName": "IG-11",
+        "Role": "Protector"
+    }
+]
